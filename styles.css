@@ -29,7 +29,7 @@ html{
 .contenedor-header header .logo a{
     font-family: Helvetica;
     font-size: 36px;
-    color: #1CB698;
+    color: #e06666;
     text-decoration: none;
 }
 .contenedor-header header ul{
@@ -723,7 +723,11 @@ footer .arriba{
 .foto {
     border-radius: 50%;
     width: 200px;
-    height: 250px;
+    height: 270px;
+}
+
+div.contenedor-img {
+    margin-top: 100px;
 }
 
 .cv {
