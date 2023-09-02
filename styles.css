@@ -530,6 +530,7 @@ html{
 }
 .contacto .contenido-seccion{
     max-width: 1100px;
+    height: 350px;
     margin: auto;
 }
 .contacto h2{
@@ -544,7 +545,9 @@ html{
 .contacto .col{
     width: 50%;
     padding: 10px;
-    position: relative;
+    position: absolute;
+    left: 350px;
+    top: 3000px;
 }
 .contacto .col input, .contacto .col textarea{
     display: block;
@@ -704,11 +707,13 @@ footer .arriba{
     }
     .portfolio .galeria .proyecto img{
         width: 100%;
+        padding-bottom: 10px;
     }
     .contacto .fila{
         display: block;
     }
     .contacto .fila .col{
+        padding-top: 300px;
         width: 100%;
     }
 }
@@ -717,4 +722,9 @@ footer .arriba{
     border-radius: 50%;
     width: 200px;
     height: 250px;
+}
+
+.cv {
+    text-decoration: none;
+    color: white;
 }
