@@ -710,10 +710,12 @@ footer .arriba{
         padding-bottom: 10px;
     }
     .contacto .fila{
-        display: block;
+        display: flex;
+        position: absolute;
+        margin-top: -2900px;
+        margin-left: -170px;
     }
     .contacto .fila .col{
-        padding-top: 300px;
         width: 100%;
     }
 }
@@ -725,6 +727,11 @@ footer .arriba{
 }
 
 .cv {
+    text-decoration: none;
+    color: white;
+}
+
+.proyecto-a {
     text-decoration: none;
     color: white;
 }
