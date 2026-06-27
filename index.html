@@ -1,44 +1,396 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
-      <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<html lang="es" data-lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jorge Valderrabano — Web Developer & Designer</title>
+    <meta name="description" content="Portfolio of Jorge Valderrabano — Web Developer specializing in web design and web applications.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
 
-  </head>
-  <body>
-    <header class="header">
-      <a href="#" class="logo">Jorge</a>
-      <nav class="navbar">
-        <a href="#" class="active">Home</a>
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Portfolio</a>
-        <a href="#">Contact</a>
-      </nav>
-    </header>
-    <section class="home">
-        <div class="home-content">
-            <h1>Hi, I'm Jorge Valderrabano</h1>
-            <h3>Frontend Developer</h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque laudantium ipsa officia consectetur. Atque itaque iusto et cupiditate recusandae voluptates velit blanditiis ut modi deserunt. Culpa nobis voluptate deleniti suscipit.</p>
-            <div class="btn-box">
-                <a href="#">Hire me</a>
-                <a href="#">Let's Talk</a>
+    <!-- NOISE TEXTURE OVERLAY -->
+    <div class="noise-overlay" aria-hidden="true"></div>
+
+    <!-- ========== NAVIGATION ========== -->
+    <nav class="nav" id="nav">
+        <div class="nav__inner">
+            <a href="#inicio" class="nav__logo">
+                <span class="nav__logo-j">J</span><span class="nav__logo-v">V</span>
+            </a>
+            <ul class="nav__links" id="navLinks">
+                <li><a href="#inicio" class="nav__link active" data-i18n="nav_home">Inicio</a></li>
+                <li><a href="#sobremi" class="nav__link" data-i18n="nav_about">Sobre Mí</a></li>
+                <li><a href="#educacion" class="nav__link" data-i18n="nav_education">Educación</a></li>
+                <li><a href="#experiencia" class="nav__link" data-i18n="nav_experience">Experiencia</a></li>
+                <li><a href="#proyectos" class="nav__link" data-i18n="nav_projects">Proyectos</a></li>
+                <li><a href="#contacto" class="nav__link" data-i18n="nav_contact">Contacto</a></li>
+            </ul>
+            <div class="nav__actions">
+                <button class="lang-toggle" id="langToggle" aria-label="Toggle language">
+                    <span class="lang-toggle__flag" id="langFlag">🇬🇧</span>
+                    <span class="lang-toggle__label" id="langLabel">EN</span>
+                </button>
+                <button class="nav__hamburger" id="navHamburger" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
             </div>
-          </div>
-            <div class="home-sci">
-                <a href="#"><i class='bx bxl-facebook'></i></a>
-                <a href="#"><i class='bx bxl-twitter'></i></a>
-                <a href="#"><i class='bx bxl-linkedin'></i></a>
-                <a href="#"><i class='bx bxl-github'></i></a>
+        </div>
+    </nav>
+
+    <!-- ========== HERO SECTION ========== -->
+    <section id="inicio" class="hero">
+        <div class="hero__bg-grid" aria-hidden="true"></div>
+        <div class="hero__content">
+            <div class="hero__photo-wrapper">
+                <img src="Foto.jpg" alt="Jorge Valderrabano" class="hero__photo" loading="eager">
             </div>
-        
-            <span class="home-imgHover"></span>
+            <h1 class="hero__name">
+                <span class="hero__name-line">JORGE</span>
+                <span class="hero__name-line">VALDERRABANO</span>
+            </h1>
+            <p class="hero__subtitle" data-i18n="hero_subtitle">Desarrollador Web &amp; Diseñador</p>
+            <div class="hero__accent-line" aria-hidden="true"></div>
+            <div class="hero__socials">
+                <a href="https://github.com/JorgeValderrabano" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.instagram.com/jorgevalder/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://twitter.com/JorgeValderr" target="_blank" rel="noopener" aria-label="X / Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://www.youtube.com/channel/UC3DMsgkcrKPc8SDfG2cafnQ" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+        <div class="hero__scroll-indicator" aria-hidden="true">
+            <span data-i18n="hero_scroll">Desplázate</span>
+            <i class="fa-solid fa-chevron-down"></i>
+        </div>
     </section>
-  </body>
+
+    <!-- ========== ABOUT ME SECTION ========== -->
+    <section id="sobremi" class="section about">
+        <div class="section__inner">
+            <h2 class="section__title" data-i18n="about_title">Sobre Mí</h2>
+            <div class="about__grid">
+                <div class="about__photo-col animate-on-scroll">
+                    <img src="Foto.jpg" alt="Jorge Valderrabano" class="about__photo" loading="lazy">
+                    <div class="about__photo-glow" aria-hidden="true"></div>
+                </div>
+                <div class="about__info-col">
+                    <div class="about__bio animate-on-scroll">
+                        <p data-i18n="about_bio1">Hola, soy <strong>Jorge Valderrabano</strong>. Soy desarrollador web especializado en diseño web, desarrollo frontend y WordPress. Licenciado en Comunicación con experiencia en marketing digital, gestión de redes sociales y análisis de datos.</p>
+                        <p data-i18n="about_bio2">Combino mi formación en comunicación con habilidades técnicas para crear experiencias web que no solo se ven bien, sino que comunican eficazmente. He trabajado con más de 40 clientes creando sitios web profesionales, plataformas de e-commerce y aplicaciones web.</p>
+                        <p data-i18n="about_bio3">Actualmente disponible para proyectos freelance. Si necesitas un sitio web profesional, no dudes en contactarme.</p>
+                    </div>
+                    <div class="about__details animate-on-scroll">
+                        <div class="about__detail-item">
+                            <i class="fa-solid fa-mobile-screen"></i>
+                            <div>
+                                <span class="about__detail-label" data-i18n="about_phone_label">Teléfono</span>
+                                <span class="about__detail-value">+52 (993) 250 6007</span>
+                            </div>
+                        </div>
+                        <div class="about__detail-item">
+                            <i class="fa-solid fa-envelope"></i>
+                            <div>
+                                <span class="about__detail-label" data-i18n="about_email_label">Email</span>
+                                <span class="about__detail-value">jorgevalder@hotmail.com</span>
+                            </div>
+                        </div>
+                        <div class="about__detail-item">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <div>
+                                <span class="about__detail-label" data-i18n="about_location_label">Ubicación</span>
+                                <span class="about__detail-value">Villahermosa, Tabasco, México</span>
+                            </div>
+                        </div>
+                        <div class="about__detail-item">
+                            <i class="fa-solid fa-briefcase"></i>
+                            <div>
+                                <span class="about__detail-label" data-i18n="about_status_label">Disponibilidad</span>
+                                <span class="about__detail-value about__badge" data-i18n="about_status_value">Freelance</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about__cv-btn animate-on-scroll">
+                        <a href="https://drive.google.com/file/d/1pj9f3EDnkEG3EbfC7GdFrV15YLGn2-Pg/view?usp=drive_link" target="_blank" rel="noopener" class="btn btn--primary">
+                            <i class="fa-solid fa-download"></i>
+                            <span data-i18n="about_cv_btn">Descargar CV</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skills with animated tech logos -->
+            <div class="about__skills animate-on-scroll">
+                <h3 class="about__skills-title" data-i18n="about_skills_title">Habilidades</h3>
+                <div class="skills-grid">
+                    <div class="skill-tag draggable" data-skill="html">
+                        <div class="skill-tag__icon"><i class="fa-brands fa-html5"></i></div>
+                        <span>HTML5</span>
+                    </div>
+                    <div class="skill-tag draggable" data-skill="css">
+                        <div class="skill-tag__icon"><i class="fa-brands fa-css3-alt"></i></div>
+                        <span>CSS3</span>
+                    </div>
+                    <div class="skill-tag draggable" data-skill="js">
+                        <div class="skill-tag__icon"><i class="fa-brands fa-js"></i></div>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="skill-tag draggable" data-skill="wp">
+                        <div class="skill-tag__icon"><i class="fa-brands fa-wordpress"></i></div>
+                        <span>WordPress</span>
+                    </div>
+                    <div class="skill-tag draggable" data-skill="python">
+                        <div class="skill-tag__icon"><i class="fa-brands fa-python"></i></div>
+                        <span>Python</span>
+                    </div>
+                    <div class="skill-tag draggable" data-skill="git">
+                        <div class="skill-tag__icon"><i class="fa-brands fa-git-alt"></i></div>
+                        <span>Git</span>
+                    </div>
+                    <div class="skill-tag draggable" data-skill="figma">
+                        <div class="skill-tag__icon"><i class="fa-brands fa-figma"></i></div>
+                        <span>Figma</span>
+                    </div>
+                    <div class="skill-tag draggable" data-skill="react">
+                        <div class="skill-tag__icon"><i class="fa-brands fa-react"></i></div>
+                        <span>React</span>
+                    </div>
+                    <div class="skill-tag draggable" data-skill="node">
+                        <div class="skill-tag__icon"><i class="fa-brands fa-node-js"></i></div>
+                        <span>Node.js</span>
+                    </div>
+                    <div class="skill-tag draggable" data-skill="sass">
+                        <div class="skill-tag__icon"><i class="fa-brands fa-sass"></i></div>
+                        <span>Sass</span>
+                    </div>
+                    <div class="skill-tag draggable" data-skill="design">
+                        <div class="skill-tag__icon"><i class="fa-solid fa-palette"></i></div>
+                        <span data-i18n="skill_design">Diseño Web</span>
+                    </div>
+                    <div class="skill-tag draggable" data-skill="writing">
+                        <div class="skill-tag__icon"><i class="fa-solid fa-pencil"></i></div>
+                        <span data-i18n="skill_writing">Redacción</span>
+                    </div>
+                    <div class="skill-tag draggable" data-skill="video">
+                        <div class="skill-tag__icon"><i class="fa-solid fa-photo-film"></i></div>
+                        <span data-i18n="skill_video">Edición</span>
+                    </div>
+                    <div class="skill-tag draggable" data-skill="english">
+                        <div class="skill-tag__icon"><i class="fa-solid fa-language"></i></div>
+                        <span data-i18n="skill_english">Inglés</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Draggable text cards -->
+            <div class="about__text-cards">
+                <div class="text-card draggable resizable animate-on-scroll">
+                    <div class="text-card__handle" aria-label="Drag to move"><i class="fa-solid fa-grip"></i></div>
+                    <h4 data-i18n="textcard1_title">Lo que hago</h4>
+                    <p data-i18n="textcard1_text">Creo sitios web modernos y funcionales que reflejan la identidad de cada marca.</p>
+                </div>
+                <div class="text-card draggable resizable animate-on-scroll">
+                    <div class="text-card__handle" aria-label="Drag to move"><i class="fa-solid fa-grip"></i></div>
+                    <h4 data-i18n="textcard2_title">Mi enfoque</h4>
+                    <p data-i18n="textcard2_text">Diseño centrado en el usuario, rendimiento optimizado y código limpio.</p>
+                </div>
+                <div class="text-card draggable resizable animate-on-scroll">
+                    <div class="text-card__handle" aria-label="Drag to move"><i class="fa-solid fa-grip"></i></div>
+                    <h4 data-i18n="textcard3_title">Tecnologías</h4>
+                    <p data-i18n="textcard3_text">HTML, CSS, JavaScript, WordPress, React, Node.js, Python, Git, Figma y más.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== EDUCATION SECTION ========== -->
+    <section id="educacion" class="section education">
+        <div class="section__inner">
+            <h2 class="section__title" data-i18n="edu_title">Educación</h2>
+            <div class="timeline timeline--left">
+                <div class="timeline__line" aria-hidden="true"></div>
+
+                <div class="timeline__item animate-on-scroll">
+                    <div class="timeline__marker" aria-hidden="true"></div>
+                    <div class="timeline__card">
+                        <span class="timeline__year">2013 – 2017</span>
+                        <h4 class="timeline__title" data-i18n="edu1_title">Licenciado en Comunicación</h4>
+                        <span class="timeline__institution" data-i18n="edu1_inst">Universidad Juárez Autónoma de Tabasco</span>
+                    </div>
+                </div>
+
+                <div class="timeline__item animate-on-scroll">
+                    <div class="timeline__marker" aria-hidden="true"></div>
+                    <div class="timeline__card">
+                        <span class="timeline__year">2022</span>
+                        <h4 class="timeline__title" data-i18n="edu2_title">Técnico en Informática</h4>
+                        <span class="timeline__institution" data-i18n="edu2_inst">Fundación Carlos Slim</span>
+                    </div>
+                </div>
+
+                <div class="timeline__item animate-on-scroll">
+                    <div class="timeline__marker" aria-hidden="true"></div>
+                    <div class="timeline__card">
+                        <span class="timeline__year">2023</span>
+                        <h4 class="timeline__title" data-i18n="edu3_title">Introducción al Desarrollo Web</h4>
+                        <span class="timeline__institution" data-i18n="edu3_inst">Google</span>
+                    </div>
+                </div>
+
+                <div class="timeline__item animate-on-scroll">
+                    <div class="timeline__marker" aria-hidden="true"></div>
+                    <div class="timeline__card">
+                        <span class="timeline__year">2023</span>
+                        <h4 class="timeline__title" data-i18n="edu4_title">Responsive Web Design</h4>
+                        <span class="timeline__institution" data-i18n="edu4_inst">freeCodeCamp</span>
+                    </div>
+                </div>
+
+                <div class="timeline__item animate-on-scroll">
+                    <div class="timeline__marker" aria-hidden="true"></div>
+                    <div class="timeline__card">
+                        <span class="timeline__year">2023</span>
+                        <h4 class="timeline__title" data-i18n="edu5_title">Elements of AI</h4>
+                        <span class="timeline__institution" data-i18n="edu5_inst">University of Helsinki</span>
+                    </div>
+                </div>
+
+                <div class="timeline__item animate-on-scroll">
+                    <div class="timeline__marker" aria-hidden="true"></div>
+                    <div class="timeline__card">
+                        <span class="timeline__year">2023</span>
+                        <h4 class="timeline__title" data-i18n="edu6_title">Desarrollador de Servidores</h4>
+                        <span class="timeline__institution" data-i18n="edu6_inst">Fundación Carlos Slim</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== WORK EXPERIENCE SECTION ========== -->
+    <section id="experiencia" class="section experience">
+        <div class="section__inner">
+            <h2 class="section__title" data-i18n="exp_title">Experiencia de Trabajo</h2>
+            <div class="timeline timeline--right">
+                <div class="timeline__line" aria-hidden="true"></div>
+
+                <div class="timeline__item animate-on-scroll">
+                    <div class="timeline__marker" aria-hidden="true"></div>
+                    <div class="timeline__card">
+                        <span class="timeline__year">2020</span>
+                        <h4 class="timeline__title" data-i18n="exp1_title">Redactor</h4>
+                        <span class="timeline__institution" data-i18n="exp1_inst">Revista Tomos y Grapas</span>
+                        <p class="timeline__desc" data-i18n="exp1_desc">Trabajé como redactor de noticias, reportajes y crónicas. También desarrollé mis habilidades en edición de contenidos para páginas web.</p>
+                    </div>
+                </div>
+
+                <div class="timeline__item animate-on-scroll">
+                    <div class="timeline__marker" aria-hidden="true"></div>
+                    <div class="timeline__card">
+                        <span class="timeline__year">2020 – 2022</span>
+                        <h4 class="timeline__title" data-i18n="exp2_title">Coordinador de Servicios Generales</h4>
+                        <span class="timeline__institution" data-i18n="exp2_inst">Grupo Financiero Banorte</span>
+                        <p class="timeline__desc" data-i18n="exp2_desc">Comencé como analista de datos, elaborando reportes y requisiciones. Actué como coordinador de proyectos y solicitudes de servicio con seguimiento a nivel nacional.</p>
+                    </div>
+                </div>
+
+                <div class="timeline__item animate-on-scroll">
+                    <div class="timeline__marker" aria-hidden="true"></div>
+                    <div class="timeline__card">
+                        <span class="timeline__year">2023 – Presente</span>
+                        <h4 class="timeline__title" data-i18n="exp3_title">Frontend Developer</h4>
+                        <span class="timeline__institution" data-i18n="exp3_inst">Lavendi</span>
+                        <p class="timeline__desc" data-i18n="exp3_desc">Desarrollador frontend y WordPress. He diseñado y desarrollado más de 40 sitios web para clientes en diversos sectores: salud, educación, e-commerce, servicios profesionales y más.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== PROJECTS SECTION ========== -->
+    <section id="proyectos" class="section projects">
+        <div class="section__inner">
+            <h2 class="section__title" data-i18n="proj_title">Proyectos</h2>
+            <p class="section__subtitle" data-i18n="proj_subtitle">Una selección de sitios web y aplicaciones que he diseñado y desarrollado.</p>
+
+            <div class="projects__filters">
+                <button class="filter-btn active" data-filter="all" data-i18n="filter_all">Todos</button>
+                <button class="filter-btn" data-filter="web" data-i18n="filter_web">Sitios Web</button>
+                <button class="filter-btn" data-filter="ecommerce" data-i18n="filter_ecommerce">E-Commerce</button>
+                <button class="filter-btn" data-filter="education" data-i18n="filter_education">Educación</button>
+            </div>
+
+            <div class="projects__grid" id="projectsGrid">
+                <!-- Projects are injected by JS -->
+            </div>
+
+            <div class="projects__github animate-on-scroll">
+                <h3 data-i18n="proj_github_title">Proyectos en GitHub</h3>
+                <div class="projects__github-grid" id="githubGrid">
+                    <!-- GitHub projects injected by JS -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CONTACT SECTION ========== -->
+    <section id="contacto" class="section contact">
+        <div class="section__inner">
+            <h2 class="section__title" data-i18n="contact_title">Contacto</h2>
+            <p class="section__subtitle" data-i18n="contact_subtitle">¿Tienes un proyecto en mente? Hablemos.</p>
+
+            <div class="contact__grid">
+                <div class="contact__card animate-on-scroll">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <h4 data-i18n="contact_loc_title">Ubicación</h4>
+                    <p>Villahermosa, Tabasco, México</p>
+                </div>
+                <div class="contact__card animate-on-scroll">
+                    <i class="fa-solid fa-mobile-screen"></i>
+                    <h4 data-i18n="contact_phone_title">Teléfono</h4>
+                    <p><a href="tel:+529932506007">+52 (993) 250 6007</a></p>
+                </div>
+                <div class="contact__card animate-on-scroll">
+                    <i class="fa-solid fa-envelope"></i>
+                    <h4 data-i18n="contact_email_title">Email</h4>
+                    <p><a href="mailto:jorgevalder@hotmail.com">jorgevalder@hotmail.com</a></p>
+                </div>
+                <div class="contact__card animate-on-scroll">
+                    <i class="fa-brands fa-github"></i>
+                    <h4>GitHub</h4>
+                    <p><a href="https://github.com/JorgeValderrabano" target="_blank" rel="noopener">JorgeValderrabano</a></p>
+                </div>
+            </div>
+
+            <div class="contact__socials animate-on-scroll">
+                <a href="https://github.com/JorgeValderrabano" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.instagram.com/jorgevalder/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://twitter.com/JorgeValderr" target="_blank" rel="noopener" aria-label="X / Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://www.youtube.com/channel/UC3DMsgkcrKPc8SDfG2cafnQ" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="footer__inner">
+            <p>&copy; 2025–2026 Jorge Valderrabano. <span data-i18n="footer_rights">Todos los derechos reservados.</span></p>
+            <div class="footer__socials">
+                <a href="https://github.com/JorgeValderrabano" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.instagram.com/jorgevalder/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://twitter.com/JorgeValderr" target="_blank" rel="noopener" aria-label="X / Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://www.youtube.com/channel/UC3DMsgkcrKPc8SDfG2cafnQ" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+        <a href="#inicio" class="footer__top" aria-label="Back to top">
+            <i class="fa-solid fa-angles-up"></i>
+        </a>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>
