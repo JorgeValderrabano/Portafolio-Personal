@@ -23,20 +23,21 @@
             hero_scroll: 'Desplázate',
 
             about_title: 'Sobre Mí',
-            about_bio1: 'Hola, soy <strong>Jorge Valderrabano</strong>. Soy desarrollador web especializado en diseño web, desarrollo frontend y WordPress. Licenciado en Comunicación con experiencia en marketing digital, gestión de redes sociales y análisis de datos.',
-            about_bio2: 'Combino mi formación en comunicación con habilidades técnicas para crear experiencias web que no solo se ven bien, sino que comunican eficazmente. He trabajado con más de 40 clientes creando sitios web profesionales, plataformas de e-commerce y aplicaciones web.',
-            about_bio3: 'Actualmente disponible para proyectos freelance. Si necesitas un sitio web profesional, no dudes en contactarme.',
+            about_bio1: 'Hola, soy <strong>Jorge Valderrabano</strong>. Soy desarrollador web, especialista en operaciones digitales y fundador de Virtualder. Con más de 10 años de experiencia combinada, me dedico a crear soluciones integrales para potenciar la presencia en línea de las empresas.',
+            about_bio2: 'Hoy, utilizo esta experiencia multidisciplinaria para construir sitios web optimizados para conversiones (utilizando HTML, CSS, JavaScript y CMS), gestionar sistemas CRM y automatizar flujos de trabajo. Mi objetivo es simple: crear plataformas que no solo destaquen visualmente, sino que impulsen el crecimiento real y los ingresos de mis clientes. Combino mi formación en comunicación con habilidades técnicas para crear experiencias web que no solo se ven bien, sino que comunican eficazmente. He trabajado con más de 40 clientes creando sitios web profesionales, plataformas de e-commerce y aplicaciones web.',
+            about_bio3: 'Hoy, utilizo esta experiencia multidisciplinaria para construir sitios web optimizados para conversiones (utilizando HTML, CSS, JavaScript y CMS), gestionar sistemas CRM y automatizar flujos de trabajo. Mi objetivo es simple: crear plataformas que no solo destaquen visualmente, sino que impulsen el crecimiento real y los ingresos de mis clientes. Actualmente disponible para proyectos freelance. Si necesitas un sitio web profesional, no dudes en contactarme.',
             about_phone_label: 'Teléfono',
             about_email_label: 'Email',
             about_location_label: 'Ubicación',
             about_status_label: 'Disponibilidad',
-            about_status_value: 'Freelance',
+            about_status_value: 'Disponible hasta Julio | Freelance',
             about_cv_btn: 'Descargar CV',
             about_skills_title: 'Habilidades',
             skill_design: 'Diseño Web',
             skill_writing: 'Redacción',
             skill_video: 'Edición',
-            skill_english: 'Inglés',
+            skill_english: 'Inglés Nivel C2',
+            skill_italian: 'Italiano Nivel B1',
             textcard1_title: 'Lo que hago',
             textcard1_text: 'Creo sitios web modernos y funcionales que reflejan la identidad de cada marca.',
             textcard2_title: 'Mi enfoque',
@@ -44,19 +45,31 @@
             textcard3_title: 'Tecnologías',
             textcard3_text: 'HTML, CSS, JavaScript, WordPress, React, Node.js, Python, Git, Figma y más.',
 
-            edu_title: 'Educación',
+            edu_title: 'Formación y Certificaciones',
             edu1_title: 'Licenciado en Comunicación',
             edu1_inst: 'Universidad Juárez Autónoma de Tabasco',
+            edu1_desc: 'Formación en comunicación estratégica, periodismo, producción audiovisual, comunicación organizacional y marketing. Desarrollé habilidades en redacción, investigación, creación de contenidos, narrativa y gestión de proyectos de comunicación que hoy aplico en el desarrollo web y el marketing digital.',
             edu2_title: 'Técnico en Informática',
             edu2_inst: 'Fundación Carlos Slim',
-            edu3_title: 'Introducción al Desarrollo Web',
+            edu2_desc: 'Capacitación en hardware, software, sistemas operativos, redes y soporte técnico. Fortalecí mi capacidad para resolver problemas técnicos y comprender el funcionamiento de la infraestructura informática.',
+            edu3_title: 'Introducción al Desarrollo Web I & II',
             edu3_inst: 'Google',
+            edu3_desc: 'Fundamentos del desarrollo web moderno, incluyendo HTML, CSS, JavaScript y buenas prácticas para la creación de sitios accesibles, responsivos y orientados a la experiencia del usuario.',
             edu4_title: 'Responsive Web Design',
             edu4_inst: 'freeCodeCamp',
+            edu4_desc: 'Desarrollo de interfaces web adaptables utilizando HTML5 y CSS3, aplicando principios de diseño responsive, accesibilidad y maquetación moderna para diferentes dispositivos.',
             edu5_title: 'Elements of AI',
             edu5_inst: 'University of Helsinki',
+            edu5_desc: 'Introducción a la inteligencia artificial, aprendizaje automático y aplicaciones prácticas de la IA. Comprensión de sus fundamentos y de cómo integrarla para mejorar procesos y productividad.',
             edu6_title: 'Desarrollador de Servidores',
             edu6_inst: 'Fundación Carlos Slim',
+            edu6_desc: 'Conocimientos sobre administración de servidores, servicios de red, configuración de infraestructura y gestión de entornos para aplicaciones y sitios web.',
+            edu7_title: 'Administrador de Bases de Datos',
+            edu7_inst: 'Fundación Carlos Slim',
+            edu7_desc: 'Formación en diseño, administración y mantenimiento de bases de datos relacionales, consultas SQL y gestión eficiente de la información para aplicaciones empresariales.',
+            edu8_title: 'Inglés C2',
+            edu8_inst: 'EF SET Certificate',
+            edu8_desc: 'Certificación de dominio avanzado del idioma inglés (C2), con capacidad para comunicarme de forma profesional en entornos internacionales, comprender documentación técnica y colaborar con equipos globales.',
 
             exp_title: 'Experiencia de Trabajo',
             exp1_title: 'Redactor',
@@ -99,20 +112,21 @@
             hero_scroll: 'Scroll',
 
             about_title: 'About Me',
-            about_bio1: 'Hi, I\'m <strong>Jorge Valderrabano</strong>. I\'m a web developer specializing in web design, frontend development, and WordPress. I hold a Bachelor\'s degree in Communication with experience in digital marketing, social media management, and data analysis.',
-            about_bio2: 'I combine my communication background with technical skills to create web experiences that not only look great but communicate effectively. I\'ve worked with over 40 clients creating professional websites, e-commerce platforms, and web applications.',
-            about_bio3: 'Currently available for freelance projects. If you need a professional website, don\'t hesitate to reach out.',
+            about_bio1: 'Hi, I\'m <strong>Jorge Valderrabano</strong>. I\'m a web developer, digital operations specialist, and founder of Virtualder. With over 10 years of combined experience, I specialize in creating comprehensive solutions to elevate businesse\'s online presence.',
+            about_bio2: 'My profile is unique because it bridges creativity with analytical rigor. On one hand, my background in Communication has allowed me to specialize in content creation, SEO, and digital marketing strategies. On the other hand, my corporate track record—at institutions like Grupo Financiero Banorte and CASUNI—trained me in rigorous project management, operational administration, auditing, and data analysis. I combine my communication background with technical skills to create web experiences that not only look great but communicate effectively. I\'ve worked with over 40 clients creating professional websites, e-commerce platforms, and web applications.',
+            about_bio3: 'Today, I leverage this multidisciplinary experience to build conversion-optimized websites (using HTML, CSS, JavaScript, and CMS), manage CRM systems, and automate workflows. My goal is simple: to build platforms that not only stand out visually but also drive real growth and revenue for my clients. Currently available for freelance projects. If you need a professional website, don\'t hesitate to reach out.',
             about_phone_label: 'Phone',
             about_email_label: 'Email',
             about_location_label: 'Location',
             about_status_label: 'Availability',
-            about_status_value: 'Freelance',
+            about_status_value: 'Available until July | Freelance',
             about_cv_btn: 'Download CV',
             about_skills_title: 'Skills',
             skill_design: 'Web Design',
             skill_writing: 'Copywriting',
             skill_video: 'Editing',
-            skill_english: 'English',
+            skill_english: 'C2 English',
+            skill_italian: 'B1 Italian',
             textcard1_title: 'What I Do',
             textcard1_text: 'I build modern, functional websites that reflect each brand\'s identity.',
             textcard2_title: 'My Approach',
@@ -120,19 +134,31 @@
             textcard3_title: 'Technologies',
             textcard3_text: 'HTML, CSS, JavaScript, WordPress, React, Node.js, Python, Git, Figma & more.',
 
-            edu_title: 'Education',
+            edu_title: 'Education & Certifications',
             edu1_title: 'Bachelor\'s in Communication',
             edu1_inst: 'Universidad Juárez Autónoma de Tabasco',
+            edu1_desc: 'Training in strategic communication, journalism, audiovisual production, organizational communication, and marketing. Developed skills in writing, research, content creation, narrative, and communication project management that I now apply in web development and digital marketing.',
             edu2_title: 'IT Technician',
             edu2_inst: 'Fundación Carlos Slim',
-            edu3_title: 'Intro to Web Development',
+            edu2_desc: 'Training in hardware, software, operating systems, networks, and technical support. Strengthened my ability to solve technical problems and understand how IT infrastructure works.',
+            edu3_title: 'Intro to Web Development I & II',
             edu3_inst: 'Google',
+            edu3_desc: 'Fundamentals of modern web development, including HTML, CSS, JavaScript, and best practices for creating accessible, responsive, user-experience-oriented websites.',
             edu4_title: 'Responsive Web Design',
             edu4_inst: 'freeCodeCamp',
+            edu4_desc: 'Development of adaptable web interfaces using HTML5 and CSS3, applying responsive design principles, accessibility, and modern layout techniques for different devices.',
             edu5_title: 'Elements of AI',
             edu5_inst: 'University of Helsinki',
+            edu5_desc: 'Introduction to artificial intelligence, machine learning, and practical AI applications. Understanding its fundamentals and how to integrate it to improve processes and productivity.',
             edu6_title: 'Server Developer',
             edu6_inst: 'Fundación Carlos Slim',
+            edu6_desc: 'Knowledge of server administration, network services, infrastructure configuration, and environment management for applications and websites.',
+            edu7_title: 'Database Administrator',
+            edu7_inst: 'Fundación Carlos Slim',
+            edu7_desc: 'Training in design, administration, and maintenance of relational databases, SQL queries, and efficient information management for business applications.',
+            edu8_title: 'C2 English',
+            edu8_inst: 'EF SET Certificate',
+            edu8_desc: 'Advanced English proficiency certification (C2), with the ability to communicate professionally in international environments, understand technical documentation, and collaborate with global teams.',
 
             exp_title: 'Work Experience',
             exp1_title: 'Writer',
@@ -237,10 +263,10 @@
         const flag = document.getElementById('langFlag');
         const label = document.getElementById('langLabel');
         if (lang === 'es') {
-            flag.textContent = '🇬🇧';
+            flag.textContent = '🇺🇸';
             label.textContent = 'EN';
         } else {
-            flag.textContent = '🇪🇸';
+            flag.textContent = '🇲🇽';
             label.textContent = 'ES';
         }
 
@@ -492,6 +518,14 @@
         }, { threshold: 0.2 });
 
         observer.observe(skillsSection);
+    }
+
+    /* ==========================================
+       STICKY EDUCATION TITLE (handled by CSS now)
+       ========================================== */
+    function setupStickyEduTitle() {
+        // Now handled purely via CSS position: sticky on .education__left
+        // No JS scroll logic needed
     }
 
     /* ==========================================
