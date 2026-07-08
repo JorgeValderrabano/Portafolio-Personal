@@ -91,6 +91,8 @@
             filter_education: 'Educación',
             visit_btn: 'Visitar',
 
+            cert_btn: 'Ver Certificado',
+
             contact_title: 'Contacto',
             contact_subtitle: '¿Tienes un proyecto en mente? Hablemos.',
             contact_loc_title: 'Ubicación',
@@ -179,6 +181,8 @@
             filter_ecommerce: 'E-Commerce',
             filter_education: 'Education',
             visit_btn: 'Visit',
+
+            cert_btn: 'View Certificate',
 
             contact_title: 'Contact',
             contact_subtitle: 'Have a project in mind? Let\'s talk.',
@@ -529,6 +533,50 @@
     }
 
     /* ==========================================
+       CERTIFICATE LIGHTBOX
+       ========================================== */
+    function setupCertLightbox() {
+        const lightbox = document.getElementById('certLightbox');
+        const image = document.getElementById('certImage');
+        const closeBtn = document.getElementById('certClose');
+        const overlay = document.getElementById('certOverlay');
+
+        if (!lightbox || !image || !closeBtn || !overlay) return;
+
+        function open(src) {
+            image.src = src;
+            lightbox.classList.add('open');
+            lightbox.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function close() {
+            lightbox.classList.remove('open');
+            lightbox.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+        }
+
+        // Open on any .cert-btn click
+        document.addEventListener('click', function (e) {
+            const btn = e.target.closest('.cert-btn');
+            if (btn && btn.dataset.cert) {
+                open(btn.dataset.cert);
+            }
+        });
+
+        // Close on X or overlay click
+        closeBtn.addEventListener('click', close);
+        overlay.addEventListener('click', close);
+
+        // Close on Escape key
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape' && lightbox.classList.contains('open')) {
+                close();
+            }
+        });
+    }
+
+    /* ==========================================
        LANGUAGE TOGGLE SETUP
        ========================================== */
     function setupLanguageToggle() {
@@ -554,6 +602,9 @@
         setupDragResize();
         setupSkillAnimations();
         setupLanguageToggle();
+
+        // Certificate lightbox
+        setupCertLightbox();
 
         // Render projects
         renderProjects('all');

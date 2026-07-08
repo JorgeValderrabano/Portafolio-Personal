@@ -232,6 +232,7 @@
                             <h4 class="timeline__title" data-i18n="edu1_title">Licenciado en Comunicación</h4>
                             <span class="timeline__institution" data-i18n="edu1_inst">Universidad Juárez Autónoma de Tabasco</span>
                             <p class="timeline__desc" data-i18n="edu1_desc">Formación en comunicación estratégica, periodismo, producción audiovisual, comunicación organizacional y marketing. Desarrollé habilidades en redacción, investigación, creación de contenidos, narrativa y gestión de proyectos de comunicación que hoy aplico en el desarrollo web y el marketing digital.</p>
+                            <button class="cert-btn" data-cert="media/certifications/degree.png" data-i18n="cert_btn">Ver Certificado</button>
                         </div>
                     </div>
                 </div>
@@ -245,6 +246,7 @@
                             <h4 class="timeline__title" data-i18n="edu2_title">Técnico en Informática</h4>
                             <span class="timeline__institution" data-i18n="edu2_inst">Fundación Carlos Slim</span>
                             <p class="timeline__desc" data-i18n="edu2_desc">Capacitación en hardware, software, sistemas operativos, redes y soporte técnico. Fortalecí mi capacidad para resolver problemas técnicos y comprender el funcionamiento de la infraestructura informática.</p>
+                            <button class="cert-btn" data-cert="media/certifications/informatic.png" data-i18n="cert_btn">Ver Certificado</button>
                         </div>
                     </div>
                 </div>
@@ -258,6 +260,7 @@
                             <h4 class="timeline__title" data-i18n="edu3_title">Introducción al Desarrollo Web I & II</h4>
                             <span class="timeline__institution" data-i18n="edu3_inst">Google</span>
                             <p class="timeline__desc" data-i18n="edu3_desc">Fundamentos del desarrollo web moderno, incluyendo HTML, CSS, JavaScript y buenas prácticas para la creación de sitios accesibles, responsivos y orientados a la experiencia del usuario.</p>
+                            <button class="cert-btn" data-cert="media/certifications/google.png" data-i18n="cert_btn">Ver Certificado</button>
                         </div>
                     </div>
                 </div>
@@ -271,6 +274,7 @@
                             <h4 class="timeline__title" data-i18n="edu4_title">Responsive Web Design</h4>
                             <span class="timeline__institution" data-i18n="edu4_inst">freeCodeCamp</span>
                             <p class="timeline__desc" data-i18n="edu4_desc">Desarrollo de interfaces web adaptables utilizando HTML5 y CSS3, aplicando principios de diseño responsive, accesibilidad y maquetación moderna para diferentes dispositivos.</p>
+                            <button class="cert-btn" data-cert="media/certifications/responsive.png" data-i18n="cert_btn">Ver Certificado</button>
                         </div>
                     </div>
                 </div>
@@ -284,6 +288,7 @@
                             <h4 class="timeline__title" data-i18n="edu5_title">Elements of AI</h4>
                             <span class="timeline__institution" data-i18n="edu5_inst">University of Helsinki</span>
                             <p class="timeline__desc" data-i18n="edu5_desc">Introducción a la inteligencia artificial, aprendizaje automático y aplicaciones prácticas de la IA. Comprensión de sus fundamentos y de cómo integrarla para mejorar procesos y productividad.</p>
+                            <button class="cert-btn" data-cert="media/certifications/elements.png" data-i18n="cert_btn">Ver Certificado</button>
                         </div>
                     </div>
                 </div>
@@ -297,6 +302,7 @@
                             <h4 class="timeline__title" data-i18n="edu6_title">Desarrollador de Servidores</h4>
                             <span class="timeline__institution" data-i18n="edu6_inst">Fundación Carlos Slim</span>
                             <p class="timeline__desc" data-i18n="edu6_desc">Conocimientos sobre administración de servidores, servicios de red, configuración de infraestructura y gestión de entornos para aplicaciones y sitios web.</p>
+                            <button class="cert-btn" data-cert="media/certifications/servers.png" data-i18n="cert_btn">Ver Certificado</button>
                         </div>
                     </div>
                 </div>
@@ -310,6 +316,7 @@
                             <h4 class="timeline__title" data-i18n="edu7_title">Administrador de Bases de Datos</h4>
                             <span class="timeline__institution" data-i18n="edu7_inst">Fundación Carlos Slim</span>
                             <p class="timeline__desc" data-i18n="edu7_desc">Formación en diseño, administración y mantenimiento de bases de datos relacionales, consultas SQL y gestión eficiente de la información para aplicaciones empresariales.</p>
+                            <button class="cert-btn" data-cert="media/certifications/database.png" data-i18n="cert_btn">Ver Certificado</button>
                         </div>
                     </div>
                 </div>
@@ -323,6 +330,7 @@
                             <h4 class="timeline__title" data-i18n="edu8_title">Inglés C2</h4>
                             <span class="timeline__institution" data-i18n="edu8_inst">EF SET Certificate</span>
                             <p class="timeline__desc" data-i18n="edu8_desc">Certificación de dominio avanzado del idioma inglés (C2), con capacidad para comunicarme de forma profesional en entornos internacionales, comprender documentación técnica y colaborar con equipos globales.</p>
+                            <button class="cert-btn" data-cert="media/certifications/english.png" data-i18n="cert_btn">Ver Certificado</button>
                         </div>
                     </div>
                 </div>
@@ -441,6 +449,17 @@
             </div>
         </div>
     </section>
+
+    <!-- ========== CERTIFICATE LIGHTBOX ========== -->
+    <div class="lightbox" id="certLightbox" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Certificate viewer">
+        <div class="lightbox__overlay" id="certOverlay"></div>
+        <div class="lightbox__content">
+            <button class="lightbox__close" id="certClose" aria-label="Close certificate">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <img src="" alt="Certificate" class="lightbox__image" id="certImage">
+        </div>
+    </div>
 
     <!-- ========== FOOTER ========== -->
     <footer class="footer">
