@@ -1,4 +1,4 @@
-# Jorge Valderrabano — Portfolio
+## Jorge Valderrabano — Portfolio
 
 Personal portfolio website showcasing web development and design projects. Built with vanilla HTML, CSS, and JavaScript.
 
