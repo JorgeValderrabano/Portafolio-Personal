@@ -226,7 +226,17 @@
        PROJECT DATA
        ========================================== */
     const projects = [
-        // ponytail: new projects prepended, 818 first, Sisu Seguros last among new ones, then existing order
+        // ponytail: UOnline first, Ideas Disruptivas last among new ones, then existing order
+        { name: 'UOnline', desc_es: 'Universidad en línea.', desc_en: 'Online University', url: 'https://uonline.mx/', img: 'img/p61.png', category: 'education' },
+        { name: 'Ena Barrera', desc_es: 'Psicóloga y terapeuta familiar.', desc_en: 'Psychologist & Family Therapist', url: 'https://enabarrera.com/', img: 'img/p54.png', category: 'health' },
+        { name: 'Espléndido', desc_es: 'Florería en Villahermosa, Tabasco.', desc_en: 'Florist in Villahermosa, Tabasco', url: 'https://esplendido.mx/', img: 'img/p55.png', category: 'ecommerce' },
+        { name: 'Zazil Tunich', desc_es: 'Cenote-Museo en Valladolid, Yucatán', desc_en: 'Cenote-Museum in Valladolid, Yucatán', url: 'https://zaziltunich.com/', img: 'img/p56.png', category: 'tourism' },
+        { name: 'Altamar Cancún', desc_es: 'Tours privados en Riviera Maya.', desc_en: 'Private Tours in Riviera Maya', url: 'https://altamarcancun.com/', img: 'img/p57.png', category: 'tourism' },
+        { name: 'RTM Group', desc_es: 'Servicios de internet en Estados Unidos.', desc_en: 'Internet Services in the United States', url: 'https://rtmgroupllc.net/', img: 'img/p58.png', category: 'professional-services' },
+        { name: 'Prismatic WiFi', desc_es: 'Servicios de telefonía e internet en Estados Unidos.', desc_en: 'Telephony & Internet Services in the United States', url: 'https://prismaticwifi.com/', img: 'img/p59.png', category: 'professional-services' },
+        { name: 'Power Fan', desc_es: 'Turbinas y ventiladores publicitarios.', desc_en: 'Advertising Turbines & Fans', url: 'https://www.power-fan.com/', img: 'img/p60.png', category: 'professional-services' },
+        { name: 'Ideas Disruptivas', desc_es: 'Servicio de innovación digital.', desc_en: 'Digital Innovation Service', url: 'https://ideasdisruptivas.com/', img: 'img/p53.png', category: 'professional-services' },
+        // Existing projects
         { name: '818 Inmobiliaria', desc_es: 'Bienes raíces en Villahermosa, Tabasco.', desc_en: 'Real Estate in Villahermosa, Tabasco.', url: 'https://818.com.mx/', img: 'img/p52.png', category: 'real-estate' },
         { name: 'Prohiseg', desc_es: 'Consultoría en higiene y seguridad', desc_en: 'Hygiene & Safety Consulting', url: 'https://www.prohiseg.com/', img: 'img/p50.png', category: 'professional-services' },
         { name: 'Servicio Hurtado', desc_es: 'Pipas de agua en CDMX', desc_en: 'Water Trucks in Mexico City', url: 'https://serviciohurtado.com/', img: 'img/p51.png', category: 'professional-services' },
@@ -236,7 +246,6 @@
         { name: 'Villa Maryana', desc_es: 'Casa en la playa en Tabasco.', desc_en: 'Beach House in Tabasco', url: 'https://villamaryanamx.com/', img: 'img/p46.png', category: 'tourism' },
         { name: 'Maya Transportation', desc_es: 'Renta de vehículos en la Riviera Maya', desc_en: 'Vehicle Rental in Riviera Maya', url: 'https://mayatransportationmx.com/', img: 'img/p45.png', category: 'tourism' },
         { name: 'Sisu Seguros', desc_es: 'Servicio de seguros.', desc_en: 'Insurance Service', url: 'https://www.sisuseguros.mx/', img: 'img/p44.png', category: 'professional-services' },
-        // Existing projects
         { name: 'MCI', desc_es: 'Tienda de Insertos para Maquinado y Torneado', desc_en: 'Machining Inserts Store', url: 'https://minsertos.com.mx/', img: 'img/p43.png', category: 'ecommerce' },
         { name: 'The Supps Factory', desc_es: 'Tienda de Suplementos Alimenticios', desc_en: 'Nutritional Supplements Store', url: 'https://thesuppsfactory.com.mx/', img: 'img/p41.png', category: 'ecommerce' },
         { name: 'One Global MG', desc_es: 'Servicios de Fletes e Importación', desc_en: 'Freight & Import Services', url: 'https://oneglobalmg.com/', img: 'img/p40.png', category: 'ecommerce' },
