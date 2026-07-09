@@ -335,6 +335,9 @@
             }
         });
 
+        // Update filter counts for current language
+        updateFilterCounts();
+
         // Re-render projects with new language
         renderProjects('all');
         renderGithubProjects();
@@ -477,7 +480,17 @@
     /* ==========================================
        PROJECT FILTERS
        ========================================== */
+    function updateFilterCounts() {
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            const filter = btn.getAttribute('data-filter');
+            const count = filter === 'all' ? projects.length : projects.filter(p => p.category === filter).length;
+            const label = translations[currentLang]['filter_' + filter] || btn.textContent.replace(/\s*\(\d+\)$/, '');
+            btn.textContent = label + ' (' + count + ')';
+        });
+    }
+
     function setupFilters() {
+        updateFilterCounts();
         const buttons = document.querySelectorAll('.filter-btn');
 
         buttons.forEach(btn => {
