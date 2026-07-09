@@ -312,14 +312,9 @@
         document.documentElement.setAttribute('data-lang', lang);
 
         // Update toggle button
-        const flag = document.getElementById('langFlag');
         const label = document.getElementById('langLabel');
-        if (lang === 'es') {
-            flag.textContent = '🇺🇸';
-            label.textContent = 'EN';
-        } else {
-            flag.textContent = '🇲🇽';
-            label.textContent = 'ES';
+        if (label) {
+            label.textContent = lang === 'es' ? 'EN' : 'ES';
         }
 
         // Update page title
@@ -673,6 +668,55 @@
 
         // Initial scroll animation observation
         observeElements();
+
+        // ASCII canvas background animation
+        setupAsciiCanvas();
+    }
+
+    /* ==========================================
+       ASCII CANVAS ANIMATION (Hero Background)
+       ========================================== */
+    function setupAsciiCanvas() {
+        const canvas = document.getElementById('asciiCanvas');
+        if (!canvas) return;
+
+        const ctx = canvas.getContext('2d');
+        let cols, rows, drops;
+        const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789<>/{}[]|&^%$#@!';
+        const fontSize = 10;
+
+        function resize() {
+            const hero = canvas.parentElement;
+            canvas.width = hero.offsetWidth;
+            canvas.height = hero.offsetHeight;
+            cols = Math.floor(canvas.width / fontSize);
+            rows = Math.floor(canvas.height / fontSize);
+            drops = Array(cols).fill(0).map(() => Math.floor(Math.random() * -rows));
+        }
+
+        function draw() {
+            ctx.fillStyle = 'rgba(10, 10, 10, 0.05)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            ctx.font = fontSize + 'px monospace';
+            ctx.fillStyle = '#8b5cf6';
+
+            for (let i = 0; i < drops.length; i++) {
+                const char = chars[Math.floor(Math.random() * chars.length)];
+                const x = i * fontSize;
+                const y = drops[i] * fontSize;
+                ctx.fillText(char, x, y);
+
+                if (y > canvas.height && Math.random() > 0.975) {
+                    drops[i] = 0;
+                }
+                drops[i]++;
+            }
+        }
+
+        resize();
+        window.addEventListener('resize', resize);
+        setInterval(draw, 50);
     }
 
     // Run when DOM is ready
