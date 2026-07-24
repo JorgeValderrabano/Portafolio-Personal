@@ -434,10 +434,21 @@
         </div>
     </section>
 
-    <!-- ========== PROJECTS SECTION ========== -->
+    <!-- ========== CURRENT PROJECTS SECTION ========== -->
     <section id="proyectos" class="section projects">
         <div class="section__inner">
-            <h2 class="section__title" data-i18n="proj_title">Proyectos</h2>
+            <h2 class="section__title" data-i18n="proj_current_title">Proyectos Actuales</h2>
+
+            <div class="projects__grid" id="currentProjectsGrid">
+                <!-- Current projects are injected by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== ADDITIONAL PROJECTS SECTION ========== -->
+    <section id="proyectos-adicionales" class="section projects">
+        <div class="section__inner">
+            <h2 class="section__title" data-i18n="proj_additional_title">Proyectos Adicionales</h2>
             <p class="section__subtitle" data-i18n="proj_subtitle">Una selección de sitios web y aplicaciones que he diseñado y desarrollado.</p>
 
             <div class="projects__filters">
@@ -453,7 +464,7 @@
             </div>
 
             <div class="projects__grid" id="projectsGrid">
-                <!-- Projects are injected by JS -->
+                <!-- Additional projects are injected by JS -->
             </div>
 
             <div class="projects__github animate-on-scroll">

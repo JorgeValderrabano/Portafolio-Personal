@@ -92,6 +92,8 @@
             exp6_desc: 'Fundé Virtualder, una agencia especializada en desarrollo web, SEO y marketing digital. Diseño y desarrollo sitios web enfocados en rendimiento y conversión, integrando soluciones personalizadas para empresas de diversos sectores. Además, asesoro a clientes en estrategia digital, posicionamiento orgánico, automatización de procesos e implementación de tecnologías de inteligencia artificial.',
 
             proj_title: 'Proyectos',
+            proj_current_title: 'Proyectos Actuales',
+            proj_additional_title: 'Proyectos Adicionales',
             proj_subtitle: 'Una selección de sitios web y aplicaciones que he diseñado y desarrollado.',
             proj_github_title: 'Proyectos en GitHub',
             filter_all: 'Todos',
@@ -197,6 +199,8 @@
             exp6_desc: 'I founded Virtualder, an agency specializing in web development, SEO, and digital marketing. I design and develop websites focused on performance and conversion, integrating customized solutions for companies in various sectors. I also advise clients on digital strategy, organic positioning, process automation, and the implementation of artificial intelligence technologies.',
 
             proj_title: 'Projects',
+            proj_current_title: 'Current Projects',
+            proj_additional_title: 'Additional Projects',
             proj_subtitle: 'A selection of websites and applications I\'ve designed and developed.',
             proj_github_title: 'GitHub Projects',
             filter_all: 'All',
@@ -225,6 +229,27 @@
     /* ==========================================
        PROJECT DATA
        ========================================== */
+    const currentProjects = [
+        { name: 'Kareni Santiago', desc_es: 'Portafolio oficial de Kareni Santiago, ilustradora y creadora de cómics radicada en México.', desc_en: 'Official portfolio of Kareni Santiago, illustrator and comic creator based in Mexico.', url: 'https://karenisantiago.art/', img: 'img/p62.webp', category: 'artists' },
+        { name: 'CRM Virtualder', desc_es: 'Sistema CRM hecho a la medida para centralizar y organizar toda la información de clientes actuales y prospectos.', desc_en: 'Custom CRM system to centralize and organize all current and prospective client information.', url: 'https://crm.virtualder.mx/', img: 'img/p63.webp', category: 'saas' },
+        { name: 'Gatorama', desc_es: 'Gatorama es un juego de memoria con temática de gatos. Debes emparejar los pares para completar el tablero.', desc_en: 'Gatorama is a cat-themed memory game. Match pairs to complete the board.', url: 'https://gatorama.virtualder.mx/', img: 'img/p64.webp', category: 'games' },
+        { name: 'Cymbo Care', desc_es: 'CymboCare es una solución tópica natural que ayuda a aliviar molestias de lesiones bucales y herpes labial.', desc_en: 'CymboCare is a natural topical solution that helps relieve discomfort from mouth sores and cold sores.', url: 'https://cymbocare.com.mx/', img: 'img/p65.webp', category: 'ecommerce' },
+        { name: 'Gastri Lif', desc_es: 'Gastri Lif es un suplemento alimenticio 100% natural formulado para favorecer el equilibrio gástrico y digestivo.', desc_en: 'Gastri Lif is a 100% natural dietary supplement formulated to promote gastric and digestive balance.', url: 'https://gastrilif.com.mx/', img: 'img/p66.webp', category: 'ecommerce' },
+        { name: 'Mundo Gráfico de Monterrey', desc_es: 'Soluciones integrales en papelería corporativa, empaques, publicidad y acabados de lujo en Monterrey.', desc_en: 'Comprehensive solutions in corporate stationery, packaging, advertising, and luxury finishes in Monterrey.', url: 'https://imprentamonterrey.com/', img: 'img/p67.webp', category: 'business' },
+        { name: 'Impresoras 360', desc_es: 'Renta, venta y mantenimiento de equipos multifuncionales, impresoras y escáneres en Ciudad de México.', desc_en: 'Rental, sale, and maintenance of multifunctional equipment, printers, and scanners in Mexico City.', url: 'https://impresoras360.com/', img: 'img/p68.webp', category: 'ecommerce' },
+        { name: 'JP Inspecciones', desc_es: 'Sistema de verificación de diplomas y certificaciones mediante folio o QR de empresa de certificación en México.', desc_en: 'Diploma and certification verification system via folio or QR from a certification company in Mexico.', url: 'https://jpinspecciones.com/', img: 'img/p69.webp', category: 'saas' },
+        { name: 'Vamos a Volar', desc_es: 'Operadora especializada en atender agencias y agentes de viaje independientes con sede en Chihuahua.', desc_en: 'Tour operator specialized in serving independent travel agencies and agents based in Chihuahua.', url: 'https://vamosavolar.com.mx/', img: 'img/p70.webp', category: 'business' },
+        { name: 'Sandra Jahnsen', desc_es: 'Coach especializada en técnicas neurolingüísticas con experiencia en el sector energético en México y Noruega.', desc_en: 'Coach specialized in neurolinguistic techniques with experience in the energy sector in Mexico and Norway.', url: 'https://sandrajahnsen.com/', img: 'img/p71.webp', category: 'professionals' },
+        { name: 'Bravo Deleite', desc_es: 'Empresa de salsas gourmet, hogar de La Original Salsa Qulera de venta en México, Estados Unidos y Europa.', desc_en: 'Gourmet sauce company, home of La Original Salsa Qulera, sold in Mexico, the United States, and Europe.', url: 'https://bravodeleite.com/', img: 'img/p72.webp', category: 'ecommerce' },
+        { name: 'EZ Communications', desc_es: 'Agencia de relaciones públicas, gestión de eventos y marketing especializada en Estados Unidos.', desc_en: 'Public relations, event management, and marketing agency specialized in the United States.', url: 'https://ezcommunications.com/', img: 'img/p73.webp', category: 'artists' },
+        { name: 'Resurqroo', desc_es: 'Inversiones inmobiliarias seguras y rentables en Chetumal y el sur de Quintana Roo.', desc_en: 'Safe and profitable real estate investments in Chetumal and southern Quintana Roo.', url: 'https://cesarvazquez.com.mx/', img: 'img/p74.webp', category: 'professionals' },
+        { name: 'Estudios Pacífico', desc_es: 'Estudio creativo de expertos en proyectos arquitectónicos y ejecutivos en Puerto Vallarta, Jalisco.', desc_en: 'Creative studio of experts in architectural and executive projects in Puerto Vallarta, Jalisco.', url: 'https://estudiospacifico.com/', img: 'img/p75.webp', category: 'professionals' },
+        { name: 'Solarstav & Co', desc_es: 'Empresa dedicada a impulsar el uso de energías renovables en Juriquilla, Querétaro.', desc_en: 'Company dedicated to promoting the use of renewable energy in Juriquilla, Querétaro.', url: 'https://solarstav.com/', img: 'img/p76.webp', category: 'business' },
+        { name: 'Alquimia Consultorio', desc_es: 'Consultorio de medicina estética y tienda de productos de medicina funcional en La Piedad, Michoacán.', desc_en: 'Aesthetic medicine clinic and functional medicine products store in La Piedad, Michoacán.', url: 'https://alquimiaconsultorio.com/', img: 'img/p77.webp', category: 'ecommerce' },
+        { name: 'El Mejor Lavado', desc_es: 'Lavandería y tintorería con servicio a domicilio en la ciudad de Santa Catarina, Nuevo León.', desc_en: 'Laundry and dry cleaning with home delivery service in Santa Catarina, Nuevo León.', url: 'https://elmejorlavado.com/', img: 'img/p78.webp', category: 'business' },
+        { name: 'Karen Santiago', desc_es: 'Asesora en Estrategias de Inversión y en productos bursátiles de la banca tradicional.', desc_en: 'Investment Strategy Advisor and stock market products from traditional banking.', url: 'https://karen-santiago.com/', img: 'img/p79.webp', category: 'professionals' }
+    ];
+
     const projects = [
         // ponytail: UOnline first, Ideas Disruptivas last among new ones, then existing order
         { name: 'UOnline', desc_es: 'Universidad en línea.', desc_en: 'Online University', url: 'https://uonline.mx/', img: 'img/p61.png', category: 'education' },
@@ -334,6 +359,7 @@
         updateFilterCounts();
 
         // Re-render projects with new language
+        renderCurrentProjects();
         renderProjects('all');
         renderGithubProjects();
 
@@ -370,6 +396,30 @@
         `).join('');
 
         // Observe new cards for scroll animation
+        observeElements();
+    }
+
+    function renderCurrentProjects() {
+        const grid = document.getElementById('currentProjectsGrid');
+        if (!grid) return;
+
+        const visitText = translations[currentLang].visit_btn;
+
+        grid.innerHTML = currentProjects.map((p, i) => `
+            <div class="project-card animate-on-scroll" style="transition-delay: ${Math.min(i * 0.04, 0.6)}s">
+                <div class="project-card__image-wrapper">
+                    <img src="${p.img}" alt="${p.name}" class="project-card__image" loading="lazy">
+                </div>
+                <div class="project-card__body">
+                    <h3 class="project-card__name">${p.name}</h3>
+                    <p class="project-card__desc">${currentLang === 'es' ? p.desc_es : p.desc_en}</p>
+                    <a href="${p.url}" target="_blank" rel="noopener" class="project-card__link">
+                        ${visitText} <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        `).join('');
+
         observeElements();
     }
 
@@ -663,6 +713,7 @@
         setupCertLightbox();
 
         // Render projects
+        renderCurrentProjects();
         renderProjects('all');
         renderGithubProjects();
 
