@@ -375,6 +375,7 @@
 
         // Update filter counts for current language
         updateFilterCounts();
+        updateCurrentFilterCounts();
 
         // Re-render projects with new language
         renderCurrentProjects();
@@ -569,7 +570,17 @@
         });
     }
 
+    function updateCurrentFilterCounts() {
+        document.querySelectorAll('.filter-btn-c').forEach(btn => {
+            const filter = btn.getAttribute('data-filter');
+            const count = filter === 'all' ? currentProjects.length : currentProjects.filter(p => p.category === filter).length;
+            const label = translations[currentLang]['filter_' + filter] || btn.textContent.replace(/\s*\(\d+\)$/, '');
+            btn.textContent = label + ' (' + count + ')';
+        });
+    }
+
     function setupCurrentFilters() {
+        updateCurrentFilterCounts();
         const buttons = document.querySelectorAll('.filter-btn-c');
 
         buttons.forEach(btn => {
