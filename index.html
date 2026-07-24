@@ -77,6 +77,10 @@
                 <div class="about__photo-col animate-on-scroll">
                     <img src="Foto.png" alt="Jorge Valderrabano" class="about__photo" loading="lazy">
                     <div class="about__photo-glow" aria-hidden="true"></div>
+                    <div class="about__project-count">
+                        <span class="about__project-count-number">79</span>
+                        <span class="about__project-count-label" data-i18n="about_projects_done">proyectos realizados</span>
+                    </div>
                 </div>
                 <div class="about__info-col">
                     <div class="about__bio animate-on-scroll">
@@ -334,6 +338,20 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="timeline__item animate-on-scroll">
+                    <div class="timeline__marker" aria-hidden="true"></div>
+                    <div class="timeline__card">
+                        <img src="media/logos_education/7.png" alt="" class="timeline__logo" loading="lazy">
+                        <div class="timeline__card-body">
+                            <span class="timeline__year">2026</span>
+                            <h4 class="timeline__title" data-i18n="edu9_title">Curso Preparatorio del Centro Público de Formación en Inteligencia Artificial</h4>
+                            <span class="timeline__institution" data-i18n="edu9_inst">Tecnológico Nacional de México</span>
+                            <p class="timeline__desc" data-i18n="edu9_desc">Programa del Centro Público de Inteligencia Artificial adscrito a la Secretaría de Extensión y Vinculación y a la Dirección de Vinculación e Intercambio Académico.</p>
+                            <button class="cert-btn" data-cert="media/certifications/cdfcde.png" data-i18n="cert_btn">Ver Certificado</button>
+                        </div>
+                    </div>
+                </div>
             </div>
                 </div>
             </div>
@@ -438,6 +456,17 @@
     <section id="proyectos" class="section projects">
         <div class="section__inner">
             <h2 class="section__title" data-i18n="proj_current_title">Proyectos Actuales</h2>
+            <p class="section__subtitle" data-i18n="proj_current_subtitle">Selección de los proyectos más recientes desarrollados desde virtualder.mx, diseñados y desarrollados por mí.</p>
+
+            <div class="projects__filters" id="currentProjectsFilters">
+                <button class="filter-btn-c active" data-filter="all" data-i18n="filter_all">Todos</button>
+                <button class="filter-btn-c" data-filter="artists" data-i18n="filter_artists">Artistas</button>
+                <button class="filter-btn-c" data-filter="saas" data-i18n="filter_saas">SaaS</button>
+                <button class="filter-btn-c" data-filter="games" data-i18n="filter_games">Juegos</button>
+                <button class="filter-btn-c" data-filter="ecommerce" data-i18n="filter_ecommerce">E-Commerce</button>
+                <button class="filter-btn-c" data-filter="business" data-i18n="filter_business">Negocios</button>
+                <button class="filter-btn-c" data-filter="professionals" data-i18n="filter_professionals">Profesionales</button>
+            </div>
 
             <div class="projects__grid" id="currentProjectsGrid">
                 <!-- Current projects are injected by JS -->

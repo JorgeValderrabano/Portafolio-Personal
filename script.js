@@ -31,6 +31,7 @@
             about_location_label: 'Ubicación',
             about_status_label: 'Disponibilidad',
             about_status_value: 'Disponible hasta Agosto | Freelance',
+            about_projects_done: 'proyectos realizados',
             about_cv_btn: 'Descargar CV',
             about_skills_title: 'Habilidades',
             skill_design: 'Diseño Web',
@@ -70,6 +71,9 @@
             edu8_title: 'Inglés C2',
             edu8_inst: 'EF SET Certificate',
             edu8_desc: 'Certificación de dominio avanzado del idioma inglés (C2), con capacidad para comunicarme de forma profesional en entornos internacionales, comprender documentación técnica y colaborar con equipos globales.',
+            edu9_title: 'Curso Preparatorio del Centro Público de Formación en Inteligencia Artificial',
+            edu9_inst: 'Tecnológico Nacional de México',
+            edu9_desc: 'Programa del Centro Público de Inteligencia Artificial adscrito a la Secretaría de Extensión y Vinculación y a la Dirección de Vinculación e Intercambio Académico.',
 
             exp_title: 'Experiencia de Trabajo',
             exp1_title: 'Fundador y Creador de Contenido',
@@ -93,6 +97,7 @@
 
             proj_title: 'Proyectos',
             proj_current_title: 'Proyectos Actuales',
+            proj_current_subtitle: 'Selección de los proyectos más recientes desarrollados desde virtualder.mx, diseñados y desarrollados por mí.',
             proj_additional_title: 'Proyectos Adicionales',
             proj_subtitle: 'Una selección de sitios web y aplicaciones que he diseñado y desarrollado.',
             proj_github_title: 'Proyectos en GitHub',
@@ -105,6 +110,10 @@
             filter_professional_services: 'Servicios Profesionales',
             filter_real_estate: 'Bienes Raíces',
             filter_tourism: 'Turismo',
+            filter_saas: 'SaaS',
+            filter_games: 'Juegos',
+            filter_business: 'Negocios',
+            filter_professionals: 'Profesionales',
             visit_btn: 'Visitar',
 
             cert_btn: 'Ver Certificado',
@@ -138,6 +147,7 @@
             about_location_label: 'Location',
             about_status_label: 'Availability',
             about_status_value: 'Available until August | Freelance',
+            about_projects_done: 'completed projects',
             about_cv_btn: 'Download CV',
             about_skills_title: 'Skills',
             skill_design: 'Web Design',
@@ -177,6 +187,9 @@
             edu8_title: 'C2 English',
             edu8_inst: 'EF SET Certificate',
             edu8_desc: 'Advanced English proficiency certification (C2), with the ability to communicate professionally in international environments, understand technical documentation, and collaborate with global teams.',
+            edu9_title: 'Preparatory Course of the Public Center for Training in Artificial Intelligence',
+            edu9_inst: 'National Technological Institute of Mexico',
+            edu9_desc: 'Program of the Public Center for Artificial Intelligence affiliated with the Secretariat of Extension and Outreach and the Directorate of Academic Outreach and Exchange.',
 
             exp_title: 'Work Experience',
             exp1_title: 'Founder and Content Creator',
@@ -200,6 +213,7 @@
 
             proj_title: 'Projects',
             proj_current_title: 'Current Projects',
+            proj_current_subtitle: 'Selection of the most recent projects developed from virtualder.mx, designed and developed by me.',
             proj_additional_title: 'Additional Projects',
             proj_subtitle: 'A selection of websites and applications I\'ve designed and developed.',
             proj_github_title: 'GitHub Projects',
@@ -212,6 +226,10 @@
             filter_professional_services: 'Professional Services',
             filter_real_estate: 'Real Estate',
             filter_tourism: 'Tourism',
+            filter_saas: 'SaaS',
+            filter_games: 'Games',
+            filter_business: 'Business',
+            filter_professionals: 'Professionals',
             visit_btn: 'Visit',
 
             cert_btn: 'View Certificate',
@@ -399,13 +417,17 @@
         observeElements();
     }
 
-    function renderCurrentProjects() {
+    function renderCurrentProjects(filter) {
         const grid = document.getElementById('currentProjectsGrid');
         if (!grid) return;
 
+        const filtered = filter && filter !== 'all'
+            ? currentProjects.filter(p => p.category === filter)
+            : currentProjects;
+
         const visitText = translations[currentLang].visit_btn;
 
-        grid.innerHTML = currentProjects.map((p, i) => `
+        grid.innerHTML = filtered.map((p, i) => `
             <div class="project-card animate-on-scroll" style="transition-delay: ${Math.min(i * 0.04, 0.6)}s">
                 <div class="project-card__image-wrapper">
                     <img src="${p.img}" alt="${p.name}" class="project-card__image" loading="lazy">
@@ -543,6 +565,18 @@
                 buttons.forEach(b => b.classList.remove('active'));
                 btn.classList.add('active');
                 renderProjects(btn.getAttribute('data-filter'));
+            });
+        });
+    }
+
+    function setupCurrentFilters() {
+        const buttons = document.querySelectorAll('.filter-btn-c');
+
+        buttons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                buttons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                renderCurrentProjects(btn.getAttribute('data-filter'));
             });
         });
     }
@@ -705,6 +739,7 @@
         // Setup all interactive features
         setupNavigation();
         setupFilters();
+        setupCurrentFilters();
         setupDragResize();
         setupSkillAnimations();
         setupLanguageToggle();
