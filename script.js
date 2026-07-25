@@ -377,6 +377,13 @@
         updateFilterCounts();
         updateCurrentFilterCounts();
 
+        // Update CV download link for current language
+        const cvLink = document.getElementById('cvDownloadLink');
+        if (cvLink) {
+            const href = cvLink.getAttribute('data-href-' + lang);
+            if (href) cvLink.href = href;
+        }
+
         // Re-render projects with new language
         renderCurrentProjects();
         renderProjects('all');
