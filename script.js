@@ -345,6 +345,130 @@
     ];
 
     /* ==========================================
+       ANALYTICS (private, localStorage-based)
+       ========================================== */
+    const ANALYTICS_KEY = 'jv_analytics_v1';
+
+    function getAnalytics() {
+        try {
+            return JSON.parse(localStorage.getItem(ANALYTICS_KEY)) || {};
+        } catch (e) {
+            return {};
+        }
+    }
+
+    function saveAnalytics(data) {
+        localStorage.setItem(ANALYTICS_KEY, JSON.stringify(data));
+    }
+
+    function trackEvent(category, label) {
+        const data = getAnalytics();
+        if (!data[category]) data[category] = {};
+        if (!data[category][label]) data[category][label] = 0;
+        data[category][label]++;
+        data.lastUpdated = new Date().toISOString();
+        saveAnalytics(data);
+    }
+
+    function trackReferrer() {
+        const data = getAnalytics();
+        if (data.referrerTracked) return;
+        const ref = document.referrer || '';
+        const source = ref.includes('virtualder.mx') ? 'virtualder' : (ref ? 'external' : 'direct');
+        if (!data.referrers) data.referrers = {};
+        if (!data.referrers[source]) data.referrers[source] = 0;
+        data.referrers[source]++;
+        data.referrerTracked = true;
+        saveAnalytics(data);
+    }
+
+    function trackSectionInterest() {
+        const sections = document.querySelectorAll('section[id]');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && entry.intersectionRatio > 0.5) {
+                    trackEvent('section_views', entry.target.id);
+                }
+            });
+        }, { threshold: 0.5 });
+        sections.forEach(s => observer.observe(s));
+    }
+
+    function setupAnalytics() {
+        trackReferrer();
+
+        // Track project opens (both current and additional grids)
+        document.addEventListener('click', function (e) {
+            const link = e.target.closest('.project-card__link');
+            if (link) trackEvent('project_opens', link.getAttribute('href'));
+        });
+
+        // Track CV downloads
+        document.addEventListener('click', function (e) {
+            const link = e.target.closest('#cvDownloadLink');
+            if (link) trackEvent('cv_downloads', currentLang);
+        });
+
+        // Track quote requests (contact section views)
+        const contactSection = document.getElementById('contacto');
+        if (contactSection) {
+            const obs = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting && entry.intersectionRatio > 0.5) {
+                        trackEvent('quote_requests', 'contact_view');
+                    }
+                });
+            }, { threshold: 0.5 });
+            obs.observe(contactSection);
+        }
+
+        trackSectionInterest();
+    }
+
+    function renderAnalytics() {
+        const data = getAnalytics();
+        const total = (obj) => obj ? Object.values(obj).reduce((a, b) => a + b, 0) : 0;
+
+        const rows = [
+            ['Llegadas desde Virtualder', total(data.referrers && data.referrers.virtualder ? { virtualder: data.referrers.virtualder } : {})],
+            ['Aperturas de proyectos', total(data.project_opens)],
+            ['Descargas de CV', total(data.cv_downloads)],
+            ['Visitas a Contacto (cotizaciones)', total(data.quote_requests)]
+        ];
+
+        let html = '<h2>Analytics Privado</h2><table><thead><tr><th>Métrica</th><th>Total</th></tr></thead><tbody>';
+        rows.forEach(r => { html += '<tr><td>' + r[0] + '</td><td>' + r[1] + '</td></tr>'; });
+        html += '</tbody></table>';
+
+        // Section interest
+        html += '<h3>Interés por sección</h3><table><thead><tr><th>Sección</th><th>Vistas</th></tr></thead><tbody>';
+        const views = data.section_views || {};
+        Object.entries(views).sort((a, b) => b[1] - a[1]).forEach(([k, v]) => {
+            html += '<tr><td>' + k + '</td><td>' + v + '</td></tr>';
+        });
+        html += '</tbody></table>';
+
+        // Project opens detail
+        html += '<h3>Proyectos abiertos</h3><table><thead><tr><th>Proyecto</th><th>Veces</th></tr></thead><tbody>';
+        const opens = data.project_opens || {};
+        Object.entries(opens).sort((a, b) => b[1] - a[1]).forEach(([k, v]) => {
+            html += '<tr><td>' + k + '</td><td>' + v + '</td></tr>';
+        });
+        html += '</tbody></table>';
+
+        html += '<p>Última actualización: ' + (data.lastUpdated || 'nunca') + '</p>';
+        html += '<button onclick="localStorage.removeItem(\'' + ANALYTICS_KEY + '\');location.reload()">Borrar datos</button>';
+
+        document.body.innerHTML = '<div style="max-width:800px;margin:40px auto;padding:24px;font-family:sans-serif;color:#fff;background:#111;border-radius:12px">' + html + '</div>';
+    }
+
+    function setupAnalyticsRoute() {
+        if (window.location.hash === '#analytics') {
+            renderAnalytics();
+        }
+    }
+
+    /* ==========================================
        STATE
        ========================================== */
     let currentLang = 'es';
@@ -777,6 +901,10 @@
 
         // ASCII canvas background animation
         setupAsciiCanvas();
+
+        // Analytics (private)
+        setupAnalytics();
+        setupAnalyticsRoute();
     }
 
     /* ==========================================
