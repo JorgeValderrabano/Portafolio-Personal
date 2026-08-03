@@ -19,7 +19,8 @@
             nav_projects: 'Proyectos',
             nav_contact: 'Contacto',
 
-            hero_subtitle: 'Desarrollador Web &amp; Diseñador',
+            hero_subtitle: 'Desarrollador web, especialista en operaciones digitales y fundador de Virtualder.',
+            hero_virtualder_btn: 'Conoce Virtualder',
             hero_scroll: 'Desplázate',
 
             about_title: 'Sobre Mí',
@@ -135,7 +136,8 @@
             nav_projects: 'Projects',
             nav_contact: 'Contact',
 
-            hero_subtitle: 'Web Developer &amp; Designer',
+            hero_subtitle: 'Web developer, digital operations specialist, and founder of Virtualder.',
+            hero_virtualder_btn: 'Get to Know Virtualder',
             hero_scroll: 'Scroll',
 
             about_title: 'About Me',

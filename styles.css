@@ -309,6 +309,10 @@ ul { list-style: none; }
     border-radius: 2px;
 }
 
+.hero__cta {
+    margin-bottom: 32px;
+}
+
 .hero__socials {
     display: flex;
     justify-content: center;
