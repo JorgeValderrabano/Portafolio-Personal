@@ -24,7 +24,7 @@
             hero_scroll: 'Desplázate',
 
             about_title: 'Sobre Mí',
-            about_bio1: 'Hola, soy <strong>Jorge Valderrabano</strong>. Soy desarrollador web, especialista en operaciones digitales y fundador de Virtualder. Con más de 10 años de experiencia combinada, me dedico a crear soluciones integrales para potenciar la presencia en línea de las empresas.',
+            about_bio1: 'Hola, soy <strong>Jorge Valderrábano</strong>. Soy desarrollador web, especialista en operaciones digitales y fundador de Virtualder. Con más de 10 años de experiencia combinada, me dedico a crear soluciones integrales para potenciar la presencia en línea de las empresas.',
             about_bio2: 'Hoy, utilizo esta experiencia multidisciplinaria para construir sitios web optimizados para conversiones (utilizando HTML, CSS, JavaScript y CMS), gestionar sistemas CRM y automatizar flujos de trabajo. Mi objetivo es simple: crear plataformas que no solo destaquen visualmente, sino que impulsen el crecimiento real y los ingresos de mis clientes. Combino mi formación en comunicación con habilidades técnicas para crear experiencias web que no solo se ven bien, sino que comunican eficazmente. He trabajado con más de 40 clientes creando sitios web profesionales, plataformas de e-commerce y aplicaciones web.',
             about_bio3: 'Hoy, utilizo esta experiencia multidisciplinaria para construir sitios web optimizados para conversiones (utilizando HTML, CSS, JavaScript y CMS), gestionar sistemas CRM y automatizar flujos de trabajo. Mi objetivo es simple: crear plataformas que no solo destaquen visualmente, sino que impulsen el crecimiento real y los ingresos de mis clientes. Actualmente disponible para proyectos freelance. Si necesitas un sitio web profesional, no dudes en contactarme.',
             about_phone_label: 'Teléfono',
@@ -33,7 +33,7 @@
             about_status_label: 'Disponibilidad',
             about_status_value: 'Disponible hasta Agosto | Freelance',
             about_projects_done: 'proyectos realizados',
-            about_cv_btn: 'Descargar CV',
+            about_cv_btn: 'Descargar CV en PDF',
             about_skills_title: 'Habilidades',
             skill_design: 'Diseño Web',
             skill_writing: 'Redacción',
@@ -141,7 +141,7 @@
             hero_scroll: 'Scroll',
 
             about_title: 'About Me',
-            about_bio1: 'Hi, I\'m <strong>Jorge Valderrabano</strong>. I\'m a web developer, digital operations specialist, and founder of Virtualder. With over 10 years of combined experience, I specialize in creating comprehensive solutions to elevate businesse\'s online presence.',
+            about_bio1: 'Hi, I\'m <strong>Jorge Valderrábano</strong>. I\'m a web developer, digital operations specialist, and founder of Virtualder. With over 10 years of combined experience, I specialize in creating comprehensive solutions to elevate businesse\'s online presence.',
             about_bio2: 'My profile is unique because it bridges creativity with analytical rigor. On one hand, my background in Communication has allowed me to specialize in content creation, SEO, and digital marketing strategies. On the other hand, my corporate track record—at institutions like Grupo Financiero Banorte and CASUNI—trained me in rigorous project management, operational administration, auditing, and data analysis. I combine my communication background with technical skills to create web experiences that not only look great but communicate effectively. I\'ve worked with over 40 clients creating professional websites, e-commerce platforms, and web applications.',
             about_bio3: 'Today, I leverage this multidisciplinary experience to build conversion-optimized websites (using HTML, CSS, JavaScript, and CMS), manage CRM systems, and automate workflows. My goal is simple: to build platforms that not only stand out visually but also drive real growth and revenue for my clients. Currently available for freelance projects. If you need a professional website, don\'t hesitate to reach out.',
             about_phone_label: 'Phone',
@@ -150,7 +150,7 @@
             about_status_label: 'Availability',
             about_status_value: 'Available until August | Freelance',
             about_projects_done: 'completed projects',
-            about_cv_btn: 'Download CV',
+            about_cv_btn: 'Download CV in PDF',
             about_skills_title: 'Skills',
             skill_design: 'Web Design',
             skill_writing: 'Copywriting',
@@ -364,8 +364,8 @@
 
         // Update page title
         document.title = lang === 'es'
-            ? 'Jorge Valderrabano — Portafolio'
-            : 'Jorge Valderrabano — Web Developer & Designer';
+            ? 'Jorge Valderrábano — Portafolio'
+            : 'Jorge Valderrábano — Web Developer & Designer';
 
         // Update all translatable elements
         document.querySelectorAll('[data-i18n]').forEach(el => {
