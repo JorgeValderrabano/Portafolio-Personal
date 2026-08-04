@@ -465,7 +465,9 @@
     function setupAnalyticsRoute() {
         if (window.location.hash === '#analytics') {
             renderAnalytics();
+            return true;
         }
+        return false;
     }
 
     /* ==========================================
@@ -876,8 +878,14 @@
        INITIALIZATION
        ========================================== */
     function init() {
+        // Analytics route must be checked first (before anything that could throw)
+        if (setupAnalyticsRoute()) return;
+
         // Restore saved language or default to Spanish
-        const savedLang = localStorage.getItem('portfolio-lang') || 'es';
+        let savedLang = 'es';
+        try {
+            savedLang = localStorage.getItem('portfolio-lang') || 'es';
+        } catch (e) { /* localStorage unavailable */ }
         setLanguage(savedLang);
 
         // Setup all interactive features
